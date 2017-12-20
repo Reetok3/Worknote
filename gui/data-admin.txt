@@ -1,0 +1,6 @@
+create table wwork(id integer , hizuke text , work text , star integer , tag text , groupid integer);
+create table mail(mail text , pass text);
+create table grp(id integer , name text);
+insert into wwork values(1 , "2016-08-15 10:40:43 +0900" , "WorkNoteの最後の仕上げをして、グループ機能を見やすくした。" , 3 , "コンテスト プログラミング" , 0);
+insert into wwork values(2 , "2016-08-15 10:43:58 +0900" , "Worknoteで、グループ機能を作った。大変だった。" , 3 , "コンテスト プログラミング" , 0);
+insert into wwork values(3 , "2016-08-15 10:43:49 +0900" , "Macの初期化をした。１日かかった。" , 3 , "Mac" , 0);

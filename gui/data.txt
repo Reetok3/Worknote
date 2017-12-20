@@ -1,0 +1,3 @@
+create table wwork(id integer , hizuke text , work text , star integer , tag text , groupid integer);
+create table mail(mail text , pass text);
+create table grp(id integer , name text);

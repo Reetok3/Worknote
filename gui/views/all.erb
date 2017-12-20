@@ -1,0 +1,465 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>all</title>
+    <style>
+      body{
+        background: #dcdcdc;
+
+      }
+      .one {
+        background: #ffffff;
+        width: 1300px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;  
+        -moz-border-radius: 10px;
+        /*margin-left: auto*/
+        margin: 10px;
+        margin-left: auto; margin-right: auto;
+
+      }
+
+      .nakami{ 
+        display: inline-block;
+        margin: 24px
+      }
+
+      .two {
+position: absolute;
+left:59px; 
+bottom:304px;
+height: 180px;
+overflow: auto;
+        background: #ffffff;
+        width: 40%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;  
+        -moz-border-radius: 10px;
+        margin-left: auto;
+        margin: 10px;
+        margin-left: auto;margin-right: auto;
+
+      }
+
+      .matorikkusu {
+        background: #ffffff;
+        background-image: url(/image/matrix.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width:1000px;
+        height:500px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;  
+        -moz-border-radius: 10px;
+        margin-left: auto;
+        margin: 10px;
+        margin-left: auto;margin-right: auto;
+        position: relative;
+      }
+
+
+
+      .three {
+        position: absolute;
+left:524px; 
+bottom:314px;
+height: 180px;
+overflow: auto;
+        background: #ffffff;
+        width: 40%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;  
+        -moz-border-radius: 10px;
+        margin-left: auto
+        margin: 10px;
+        margin-left: auto; margin-right: auto;
+
+      }
+      .five {
+        height: 180px;
+overflow: auto;
+                position: absolute;
+left:513px; 
+bottom:54px;
+        background: #ffffff;
+        width: 40%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;  
+        -moz-border-radius: 10px;
+        margin-left: auto        margin: 10px;
+        margin-left: auto; margin-right: auto;
+
+      }
+
+      .four {
+                        position: absolute;
+left:59px; 
+bottom:40px;
+        height: 180px;
+overflow: auto;
+        background: #ffffff;
+        width: 40%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;  
+        -moz-border-radius: 10px;
+        margin-left: auto
+        margin: 10px;
+        margin-left: auto; margin-right: auto;
+      }
+
+
+      .all1 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+
+
+      .all2 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+
+      .button {
+        font-size:20px;
+        text-align: center;
+        display: block;
+        width: 300px;
+        margin: auto;
+        padding: 15px 0px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 300;
+        margin-bottom: 40px;
+        overflow: hidden;
+        position: relative;
+        border-radius:3px;
+        transition:box-shadow 0.3s;
+        -webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+
+        span{
+          display: block;
+          border-radius:50%;
+          width: 50px;
+          height: 50px;
+          margin-left: -25px;
+          margin-top: -25px;
+          position:absolute;
+          -webkit-animation: effect-animation 2s;
+        }
+
+        &:hover{
+          -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+        }
+      }
+
+      .button-orange{
+        background: #8fbc8f;
+        color: #696969;
+        span{
+          background: #fff;
+          left:50%;
+          top:50%;
+        }
+      }
+      .button-gray{
+        background: #a9a9a9;
+        color: #696969;
+        span{
+          background: #fff;
+          left:50%;
+          top:50%;
+        }
+      }
+      .button-pink{
+        background: #ffc0cb;
+        color: #696969;
+        span{
+          background: #fff;
+          left:50%;
+          top:50%;
+        }
+      }
+      
+      input#submit_button {
+        padding: 15px 40px;
+        font-size: 1.2em;
+        // 背景色を黒に指定
+        background-color: #000;
+        // 文字色を白に指定
+        color: #fff;
+        // submitボタンのを枠を非表示にする
+        border-style: none;
+      }
+
+      tr{
+                /*border-radius: 10px;*/
+        /*-webkit-border-radius: 10px;  */
+        /*-moz-border-radius: 10px;*/
+        /*border: 1px solid #000000;*/
+        /*color: red;*/
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <br><br>
+    <!-- <img src="/matorikkusu.png"> -->
+    <div class="one">
+<!--       
+      <table>
+        <tr>
+          <th>日付&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>評価&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>タグ</th>
+        </tr>
+      </table> -->
+      <!-- <div id="sortable"> -->
+<!--         <%size=@tt.size%>
+        <%i=0%>
+        
+          <%size.times do |item|%>
+
+          <div>
+            <table>
+              <tr>
+                <td><input type="checkbox" name="wakeru[]" value="<%=@tt[i][0]%>"></td>
+                <td><%=@tt[i][1]%></td>
+                <td><%=@tt[i][2]%></td>
+                <td><%=@tt[i][3]%></td>
+                <td><%=@tt[i][4]%></td>
+                <td><%=@tt[i][5]%></td>
+              </tr>
+            </table>
+
+          </div>
+
+          <%i=i+1%>
+          <%end%>
+
+        </form> -->
+        <!-- </div> -->
+        <div class="nakami">
+
+          <h2 style="font-weight:normal;color: #708090">まだグループ化されていないWork</h2>
+          <font size=3 style="color: #708090">注意：グループは４つまでです。</font>
+          <!-- <font>まだグループ化されていないWork</font> -->
+          <form action="/wakeru" method="get" name="frm">
+            <table>
+              <tr>
+                <th></th>
+                <th>日付</th>
+                <th>内容</th>
+                <th>評価</th>
+                <th>タグ</th>
+              </tr>
+              <%size=@tt.size%>
+              <%i=0%>
+              <%size.times do |item|%>
+              <div class="trdesu">
+
+              <tr>
+                <td><input type="checkbox" name="wakeru[]" value="<%=@tt[i][0]%>"></td>
+                <td><%=@tt[i][1]%></td>
+                <td><%=@tt[i][2]%></td>
+                <td>
+                <%ii = 0%>
+                <% while @tt[i][3]!=ii %>
+                  ☆
+                  <% ii = 1 + ii %>
+              <%end%>
+                <td><%=@tt[i][4]%></td>
+              </tr>
+              <tr><td><br></td></tr>
+</div>
+              <%i=i+1%>
+              <%end%>
+              </td>
+            </table>
+            <br><br>
+            <font size="l">グループ名：</font><input type="text" name="gname"><br><br>
+            <a class="button button-orange js-effect" onclick="document.frm.submit()">グループ化</a>
+<a class="button button-pink js-effect" href="/gsyokika">グループ名を初期化する</a>
+
+            <a class="button button-gray js-effect" onclick="document.frm2.submit()">戻す</a>
+
+          </form> 
+        </div>
+      </div>
+
+      <br><br>
+      <form action="/modosu" method="get" name="frm2">
+      <div class="matorikkusu">
+
+      <div class="all1">
+
+
+
+        <div class="two">
+          <p><%=@g[0][1]%></p>
+          <!-- <form action="/wakeru" method="get"> -->
+            <table>
+              <tr>
+                <th></th>
+                <th>日付</th>
+                <th>内容</th>
+                <th>評価</th>
+                <th>タグ</th>
+              </tr>
+              <%size=@g1.size%>
+              <%i=0%>
+              <%size.times do |item|%>
+              <tr>
+                <td><input type="checkbox" name="wakeru[]" value="<%=@g1[i][0]%>"></td>
+                <td><%=@g1[i][1]%></td>
+                <td><%=@g1[i][2]%></td>
+                <td>
+                <%ii = 0%>
+              <% while @g1[i][3]!=ii %>
+              ☆
+                <% ii = 1 + ii %>
+              <%end%>
+              </td>
+                <td><%=@g1[i][4]%></td>
+              </tr>
+
+              <%i=i+1%>
+              <%end%>
+
+            </table>
+          <!-- </form>  -->
+          <!-- </div> -->
+
+        </div>
+
+
+
+        <br><br>
+
+
+
+        <div class="three">
+          <p><%=@g[1][1]%></p>
+          <!-- <form action="/wakeru" method="get"> -->
+            <table>
+              <tr>
+                <th></th>
+                <th>日付</th>
+                <th>内容</th>
+                <th>評価</th>
+                <th>タグ</th>
+              </tr>
+              <%size=@g2.size%>
+              <%i=0%>
+              <%size.times do |item|%>
+              <tr>
+                <td><input type="checkbox" name="wakeru[]" value="<%=@g2[i][0]%>"></td>
+                <td><%=@g2[i][1]%></td>
+                <td><%=@g2[i][2]%></td>
+                <td><%ii = 0%>
+              <% while @g2[i][3]!=ii %>
+              ☆
+                <% ii = 1 + ii %>
+              <%end%></td>
+                <td><%=@g2[i][4]%></td>
+              </tr>
+
+              <%i=i+1%>
+              <%end%>
+            </table>
+          <!-- </form>  -->
+        </div>
+      </div>
+      <br><br>
+
+      <div class="all2">
+
+        <div class="four">
+          <p><%=@g[2][1]%></p>
+          <!-- <form action="/wakeru" method="get"> -->
+            <table>
+              <tr>
+                <th></th>
+                <th>日付</th>
+                <th>内容</th>
+                <th>評価</th>
+                <th>タグ</th>
+              </tr>
+              <%size=@g3.size%>
+              <%i=0%>
+              <%size.times do |item|%>
+              <tr>
+                <td><input type="checkbox" name="wakeru[]" value="<%=@g3[i][0]%>"></td>
+                <td><%=@g3[i][1]%></td>
+                <td><%=@g3[i][2]%></td>
+                <td><%ii = 0%>
+              <% while @g3[i][3]!=ii %>
+              ☆
+                <% ii = 1 + ii %>
+              <%end%></td>
+                <td><%=@g3[i][4]%></td>
+              </tr>
+
+              <%i=i+1%>
+              <%end%>
+            </table>
+          <!-- </form>  -->
+          <!-- </div> -->
+          <br><br>
+
+        </div>
+        <div class="five">
+          <p><%=@g[3][1]%></p>
+          <!-- <form action="/wakeru" method="get"> -->
+            <table>
+              <tr>
+                <th></th>
+                <th>日付</th>
+                <th>内容</th>
+                <th>評価</th>
+                <th>タグ</th>
+              </tr>
+              <%size=@g4.size%>
+              <%i=0%>
+              <%size.times do |item|%>
+              <tr>
+                <td><input type="checkbox" name="wakeru[]" value="<%=@g4[i][0]%>"></td>
+                <td><%=@g4[i][1]%></td>
+                <td><%=@g4[i][2]%></td>
+                <td><%ii = 0%>
+              <% while @g4[i][3]!=ii %>
+              ☆
+                <% ii = 1 + ii %>
+              <%end%></td>
+                <td><%=@g4[i][4]%></td>
+              </tr>
+
+              <%i=i+1%>
+              <%end%>
+            </table>
+          <!-- </form>  -->
+          <!-- </div> -->
+
+        </div>
+        
+      </div></div><div class="one"><a href="/"><img width="110.5" height="107.5" src="/image/home_button.png"></a><br></div></form>      
+    </body>
+    </html>

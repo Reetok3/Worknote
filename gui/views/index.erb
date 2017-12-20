@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+      <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    body{
+      background: #dcdcdc;
+    }
+    #Home{
+      background: #ffffff;
+      width: 600px;
+      text-align: center;
+      padding: 10px;
+      /*border: 1px solid #cccccc;*/
+      border-radius: 10px;
+      -webkit-border-radius: 10px;  
+      -moz-border-radius: 10px;
+      margin: 10px;
+      margin-left: auto; margin-right: auto;
+
+    }
+    #Form {
+      background: #ffffff;
+      width: 300px;
+      text-align: center;
+      padding: 10px;
+      /*border: 1px solid #cccccc;*/
+            border-radius: 10px;
+      -webkit-border-radius: 10px;  
+      -moz-border-radius: 10px;
+      margin-left: auto
+    }
+    .button {
+      font-size:20px;
+      text-align: center;
+      display: block;
+      width: 300px;
+      margin: auto;
+      padding: 15px 0px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      overflow: hidden;
+      position: relative;
+      border-radius:3px;
+      transition:box-shadow 0.3s;
+      -webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+
+      span{
+        display: block;
+        border-radius:50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+        position:absolute;
+        -webkit-animation: effect-animation 2s;
+      }
+
+      &:hover{
+        -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+      }
+    }
+
+    .button-orange{
+      background: #ffd700;
+      color: #696969;
+      span{
+        background: #fff;
+        left:50%;
+        top:50%;
+      }
+    }
+    .button-red {
+      background: #f08080;
+      color: #696969;
+      span {
+        background: #fff;
+        left:50%;
+        top:50%;
+      }
+    }
+    .button-blue {
+      background: #add8e6;
+      color: #696969;
+      span {
+        background: #fff;
+        left: 50%;
+        top: 50%;
+      }
+    }
+
+    .button-green {
+      background: #8fbc8f;
+      color: #696969;
+      span {
+        background: #fff;
+        left: 50%;
+        top: 50%;
+      }
+    }
+    form{ 
+    display: inline-block;
+    margin: 24px
+}
+
+input#submit_button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    // 背景色を黒に指定
+    background-color: #000;
+    // 文字色を白に指定
+    color: #fff;
+    // submitボタンのを枠を非表示にする
+    border-style: none;
+}
+
+
+  </style>
+
+</head>
+<body><br>
+<!--   <div id="Form">
+  <font id="search_name"size =4.3>かんたん記録</font><br>
+    <form class="" action="search" method="get">
+      <input type="text" name="text" size="30">
+      <input type="submit" name="name" value="検索" id="submit_button">
+    </form>
+  </div> -->
+</br>
+<div id="Home">
+  <br><br><img src="/image/worknote-logo.png" width="296" height="82"><br><br><br>
+  <a class="button button-red js-effect" href="/new">今日の記録を書く</a><br>
+  <a class="button button-blue js-effect" href="/kensaku">検索</a><br>
+  <a class="button button-green js-effect" href="/all">一覧＆内容整理</a><br>
+  <a class="button button-orange js-effect" href="/mail">リマインダー設定</a><br>
+</div>
+
+
+
+</body>
+</html>

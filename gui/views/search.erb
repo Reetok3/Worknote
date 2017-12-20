@@ -1,0 +1,184 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>search</title>
+    <style>
+      body{
+        background: #dcdcdc;
+      }
+
+      .search_result{
+        margin-left:auto;
+        margin-right:auto;
+      }
+      #all {
+        background: #ffffff;
+        width: 1300px;
+        text-align: center;
+        padding: 10px;
+        /*border: 1px solid #cccccc;*/
+        margin: 10px;
+        margin-left: auto; margin-right: auto;
+    order-radius: 10px;
+      -webkit-border-radius: 10px;  
+      -moz-border-radius: 10px;
+      }
+
+        #Home {
+    background: #ffffff;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    /*border: 1px solid #cccccc;*/
+    margin: 10px;
+    margin-left: auto; margin-right: auto;
+    order-radius: 10px;
+      -webkit-border-radius: 10px;  
+      -moz-border-radius: 10px;
+
+  }
+
+      .button {
+      font-size:20px;
+      text-align: center;
+      display: block;
+      width: 300px;
+      margin: auto;
+      padding: 15px 0px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      overflow: hidden;
+      position: relative;
+      border-radius:3px;
+      transition:box-shadow 0.3s;
+      -webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+
+      span{
+        display: block;
+        border-radius:50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+        position:absolute;
+        -webkit-animation: effect-animation 2s;
+      }
+
+      &:hover{
+        -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+      }
+    }
+
+    .button-orange{
+      background: #add8e6;
+      color: #696969;
+      span{
+        background: #fff;
+        left:50%;
+        top:50%;
+      }
+    }
+    form{ 
+    display: inline-block;
+    margin: 24px
+}
+
+input#submit_button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    // 背景色を黒に指定
+    background-color: #000;
+    // 文字色を白に指定
+    color: #fff;
+    // submitボタンのを枠を非表示にする
+    border-style: none;
+}
+
+.hizuke {
+  width: 200px;
+  /*white-space: nowrap;*/
+}
+
+.naiyo {
+  width: 200px;
+  /*white-space: nowrap;*/
+}
+
+.hyouka {
+  width: 200px;
+  /*white-space: nowrap;*/
+}
+
+.tagu {
+  width: 200px;
+  /*white-space: nowrap;*/
+}
+.delete {
+  width: 200px;
+  /*white-space: nowrap;*/
+}
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#sortable').sortable();
+        $('#sortable').disableSelection();
+      });
+    </script>
+    <br><br>
+    <div id="Home"><br>
+    <!-- <font size=4.3>検索</font> -->
+      <form class="" action="search" method="get">
+        <input type="text" name="text" size="30" value="<%=@kensaku%>">
+        <br><br>
+        <a class="button button-orange js-effect" onclick="document.frm.submit()" href="/serch">検索</a><br>
+            
+      </form>
+    </div>
+    <div id="all">
+    <table class="search_result">
+      <tr>
+        <th class="hizuke">日付</th>
+        <th class="naiyo">内容</th>
+        <th class="hyouka">評価</th>
+        <th class="tagu">タグ</th>
+        <th class="icon"></th>
+        <th class="delete"></th>
+      </tr>
+    </table>
+    <div id="sortable">
+      <%size=@date1.size%>
+      <%i=0%>
+      <%size.times do |item|%>
+      <div>
+        <table class="search_result">
+          <tr>
+            <td class="hizuke"><%=@date1[i]%></td>
+            <td class="naiyo"><%=@text1[i]%></td>
+            <td class="hyouka">
+              <%ii = 0%>
+              <% while @star1[i]!=ii %>
+              ☆
+                <% ii = 1 + ii %>
+              <%end%>
+            </td>
+            <td class="tagu"><%=@tag1[i]%></td>
+            <td class="icon"><img src="/image/change_order.png" width="48.66666" height="42.33333333333333333333333"></td>
+            <td class="delete"><form action="/delete/<%=@id1[i]%>" method="get"><input type="submit" value="削除"></form></td>
+          </tr>
+        </table>
+      </div>
+      <%i=i+1%>
+      <%end%>
+    </div>
+    <a href="/"><img width="110.5" height="107.5" src="/image/home_button.png"></a><br>
+    </div>
+  </body>
+  </html>

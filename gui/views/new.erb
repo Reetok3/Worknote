@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>new</title>
+  </head>
+  <style media="screen">
+  body{
+    background: #dcdcdc;
+  }
+
+  
+
+  #font {
+    color: #c0c0c0;
+  }
+
+      .button {
+      font-size:20px;
+      text-align: center;
+      display: block;
+      width: 300px;
+      margin: auto;
+      padding: 15px 0px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      overflow: hidden;
+      position: relative;
+      border-radius:3px;
+      transition:box-shadow 0.3s;
+      -webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+
+      span{
+        display: block;
+        border-radius:50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+        position:absolute;
+        -webkit-animation: effect-animation 2s;
+      }
+
+      &:hover{
+        -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+      }
+    }
+
+    .button-orange{
+      background: #f08080;
+      color: #696969;
+      span{
+        background: #fff;
+        left:50%;
+        top:50%;
+      }
+    }
+
+    .button-gray {
+      background: #c0c0c0;
+      color: #696969
+      span{
+        background: #fff;
+        left: 50%;
+        top: 50%;
+      }
+    }
+    form{
+    display: inline-block;
+    margin: 24px
+}
+
+input#submit_button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    // 背景色を黒に指定
+    background-color: #000;
+    // 文字色を白に指定
+    color: #fff;
+    // submitボタンのを枠を非表示にする
+    border-style: none;
+}
+
+  </style>
+  <body>
+  <br><br>
+    <div id="all" style="border-radius: 10px;-webkit-border-radius: 10px;  -moz-border-radius: 10px;background: #ffffff;width: 800px;text-align: center;padding: 10px;border: 1px solid #cccccc;margin: 10px;margin-left:auto; margin-right: auto;">
+    <font color="red"><%=@error%></font><br><br>
+    <form action="newform" method="post" name="frm">
+
+      <!-- どんなWORKした？ : <input type="text" name="text" size="60" maxlength="140" value="<%=@text%>">（１４０文字まで） -->
+      <div id="work" style="margin-right: auto;"><font size=4>どんなWORKした？ : </font><input type="text" name="text" size="60" value="<%=@text%>"><font id="font" size=1>（１４０文字まで）</font></div>
+      <br><p>
+
+  <font size=4>いいWORKができた？：</font><select name="star" value="<%=@star%>">
+  <option value="1">★</option>
+  <option value="2">★★</option>
+  <option value="3">★★★</option>
+  <option value="4">★★★★</option>
+  <option value="5">★★★★★</option>
+  </select><br><br>
+    タグ<font size=1>（スペース区切り）:</font><input type="text" name="tag" value="<%=@tag%>"><br><br>
+<!--     <input type="submit" value="作成">   -->
+    <a class="button button-orange js-effect" onclick="document.frm.submit()">送信</a>
+    <a class="button button-gray js-effect" onclick="javascript:window.history.back(-1);return false;">キャンセル</a>
+    </form>
+  </div>
+  </body>
+</html>

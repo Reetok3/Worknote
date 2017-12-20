@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mail-setting</title>
+	<style>
+		body{
+        background: #dcdcdc;
+      }
+            #all {
+        background: #ffffff;
+        width: 500px;
+        text-align: center;
+        padding: 10px;
+        /*border: 1px solid #cccccc;*/
+        margin: 10px;
+        margin-left: auto; margin-right: auto;
+    order-radius: 10px;
+      -webkit-border-radius: 10px;  
+      -moz-border-radius: 10px;
+      }
+
+            .button {
+      font-size:20px;
+      text-align: center;
+      display: block;
+      width: 300px;
+      margin: auto;
+      padding: 15px 0px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      overflow: hidden;
+      position: relative;
+      border-radius:3px;
+      transition:box-shadow 0.3s;
+      -webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+
+      span{
+        display: block;
+        border-radius:50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+        position:absolute;
+        -webkit-animation: effect-animation 2s;
+      }
+
+      &:hover{
+        -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+      }
+    }
+
+    .button-orange{
+      background: #ffd700;
+      color: #696969;
+      span{
+        background: #fff;
+        left:50%;
+        top:50%;
+      }
+    }
+    form{
+    display: inline-block;
+    margin: 24px
+}
+
+input#submit_button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    // 背景色を黒に指定
+    background-color: #000;
+    // 文字色を白に指定
+    color: #fff;
+    // submitボタンのを枠を非表示にする
+    border-style: none;
+}
+
+	</style>
+</head>
+<body>
+<div id="all">
+	<form action="/mail-setting" method="post" name="frm">
+		mail:<input type="text" name="mail"><br><br>password:<input type="password" name="pass"><br><br>Mailを送信するには、Worknote-mail.appを実行してください。<br><br><a class="button button-orange js-effect" onclick="document.frm.submit()">送信</a>
+	</form><a href="/"><img width="110.5" height="107.5" src="/image/home_button.png"></a><br><br>
+</div>
+</html>
